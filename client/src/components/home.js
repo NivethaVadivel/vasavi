@@ -30,17 +30,23 @@ export const Home = () => {
         <div className='event'>
             <h3>WEDDINGS</h3>
             <img src={marriage}/>
-            <p>"A happy marriage is the union of two good forgivers." - Ruth Bell Graham</p>
+            <br></br>
+            <br></br>
+            <p><i>"A happy marriage is the union of two good forgivers." - Ruth Bell Graham</i></p>
         </div>
         <div className='event'>
             <h3>MEETINGS</h3>
             <img src={meetings}/>
-            <p>"A meeting is an event at which the minutes are kept and the hours are lost." -Unknown</p>
+            <br></br>
+            <br></br>
+            <p><i>"A meeting is an event at which the minutes are kept and the hours are lost." -Unknown</i></p>
         </div>
         <div className='event'>
             <h3>CONCERTS</h3>
             <img src={concerts}/>
-            <p>"Music is the art which is most nigh to tears and memories." - Oscar Wilde</p>
+            <br></br>
+            <br></br>
+            <p><i>"Music is the art which is most nigh to tears and memories." - Oscar Wilde</i></p>
         </div>
     </div>
     </div>

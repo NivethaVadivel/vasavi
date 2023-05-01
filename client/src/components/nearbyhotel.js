@@ -11,7 +11,6 @@ export const Nearbyhotel = () => {
           const data=response.data.data
           console.log(response)
           setlist(data)
-          // console.log(response.data.data[0].hotel_name)
           console.log("data received");
         })
         .catch((err)=>console.log(err))
@@ -22,32 +21,14 @@ export const Nearbyhotel = () => {
 
       return  (<div key={index} className={styles.event}>
                <h3>{x.hotel_name}</h3>
-              <img src="" alt='img1'/>
+              <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.indiatvnews.com%2Flifestyle%2Ffood-best-indian-restaurants-in-the-usa-you-cannot-miss-to-try-648789&psig=AOvVaw2xqHP2ekCiYiwwTx2vk07m&ust=1683015993947000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCOi_qanZ0_4CFQAAAAAdAAAAABAY" alt='img1'/>
               <p>{x.location}</p>
-              {/* <p>{x.}</p> */}
               </div>)
       }
   );
   return (
     <div className={styles.Types_of_Events}>
         {li}
-    </div>
-    // <div>
-    //   <h1>Hotels near Vasavi Mahal</h1>
-    //   {
-    //     list.map((list,index)=>(
-
-    // <div className='gap'> 
-    // <div className='Types_of_Events'>
-    //     <div className='event'>
-    //         <h3>{list.hotel_name}</h3>
-    //         <img src="" alt='img1'/>
-    //         <p>"A happy marriage is the union of two good forgivers." - Ruth Bell Graham</p>
-    //     </div>
-    // </div>
-    // </div>
-    //     ))
-    //   }  
-    // </div>
+    </div>    
   )
 }
