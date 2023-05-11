@@ -31,7 +31,6 @@ function App() {
       <Route path="/booking" element={<RequiredAuth><Booking/></RequiredAuth>}></Route>
       </Routes>
       </AuthenticationProvider>
-     
     </div>
   );
 }

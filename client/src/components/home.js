@@ -8,6 +8,7 @@ import meetings from '../images/meetings.jpg'
 import { Calender } from './calender'
 import { Link } from 'react-router-dom'
 import { Footer } from './footer'
+import { Qr } from './qr'
 export const Home = () => {
     const navigate=useNavigate();
     const explore=()=>{
@@ -50,6 +51,7 @@ export const Home = () => {
         </div>
     </div>
     </div>
+    <Qr/>
     <Footer/>
     </div>
   )

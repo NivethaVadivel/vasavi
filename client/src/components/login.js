@@ -3,8 +3,8 @@ import {Link, useLocation} from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useAuth } from './utils/Authentication';
-import styles from '../css/login.module.css'
 import login from '../images/loginbg3.jpg'
+import "../css/login.css"
 export const Login = () => {
     const navigate=useNavigate()
     const auth=useAuth()
@@ -53,35 +53,34 @@ export const Login = () => {
     }
     
   return (
-    <div className={styles.container} >
-        <div className={styles.full}>
-        <form  onSubmit={submit} className={styles.pad}>
-        <h2>Login </h2>
-            <div className={styles.main}>
-            <label>Email : </label>
-            <input label="Email" type="email" className={styles.forms} onChange={(e)=>setMail(e.target.value)} placeholder="Email" />
+        <div className="LoginPageContainer">
+        <div className="LoginPageInnerContainer">
+            <div className="LoginFormContainer">
+                <div className="LoginFormInnerContainer">
+                    <header className="header">Login to Your Account</header>
+                    <header className="subHeader">Welcome to <b>VASAVI MAHAL!</b></header>
+                    <p>Aldready Have an Account,  <Link to="/signup">Sign Up</Link></p>
+                    <form>
+                        <div className="inputContainer">
+                            <label className="label" ><span>Email
+                                    Address</span></label>
+                            <input type="email" className="input" onChange={(e)=>setMail(e.target.value)} placeholder="Enter your Email Address"/>
+                        </div>
+                        <div className="inputContainer">
+                            <label className="label"><span>Password</span></label>
+                            <input type="password" className="input" onChange={(e)=>setPass(e.target.value)} placeholder="Enter your Password"/>
+                        </div>
+                        <button className="LoginButton" onClick={submit}>Login</button>
+                    </form>
+                </div>
             </div>
-            <br></br>
-            <div className={styles.main}>
-            <label>Password : </label>
-            <input label="Password" type="password" className={styles.forms} onChange={(e)=>setPass(e.target.value)} id="showpass" placeholder="Password"/>
+            <div className="ImageContianer">
+                <img src={login} class="GroupImage"/>
             </div>
-            <br></br>
-            
-            <span><input type='checkbox' className={styles.showpass} onChange={showpassword}></input> Show Password</span>
-            <br></br>
-            <button className={styles.logbut} >Login</button>
-            <br></br>
-            <span className={styles.para}>Don't Have an account,</span>
-            <br></br>
-            <Link to='/signup'>signup</Link>
-        </form>
+            {flag==1?<div></div>:(flag==0)?<p>Enter details correctly</p>:""}
         </div>
+        </div>  
 
-        <img src={login} className={styles.homebody}></img>
-        {flag==1?<div></div>:(flag==0)?<p>Enter details correctly</p>:""}
-        
-    </div>
   )
 }
 

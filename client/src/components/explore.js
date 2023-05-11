@@ -5,7 +5,25 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Footer } from "./footer";
 export const Explore=()=> {
-  AOS.init();
+  AOS.init({
+    disableOnInteraction: true,
+  });
+  // Get the AOS instance
+// AOS.init();
+
+// Disable animations on reverse scrolling
+// var lastScrollTop = 0;
+// window.addEventListener("scroll", function() {
+//   var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//   if (scrollTop > lastScrollTop){
+//     aos.disable = false; // enable animations on forward scroll
+//   } else {
+//     aos.disable = true; // disable animations on reverse scroll
+//   }
+//   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+// });
+
+  
   return (
     <div>
 
@@ -13,7 +31,8 @@ export const Explore=()=> {
       {/* <Container> */}
         <div className={styles.section1}>
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-6 d-flex align-items-center justify-content-center" > 
+             <div>
               <h1>
                 About<br></br> <span>Vasavi Mahal</span>
               </h1>
@@ -24,10 +43,12 @@ With the philanthropic services and support of the members of the community and 
               <p>
                 Vasavi Mahal has well constructed Dining Halls, Rooms and Meeting Halls and have a capacity of holding upto 700 people for a function.
               </p>
+              </div>
+              
             </div>
             <div className="col-md-6">
               <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="50" data-aos-mirror="true" data-aos-anchor-placement="top-center">
-                <img src={require('../images/entrance.jpg')} alt="hj" />
+                <img className="rounded" src={require('../images/entrance.jpg')} alt="hj" />
               </div>
             </div>
           </div>
@@ -41,7 +62,8 @@ With the philanthropic services and support of the members of the community and 
                 <img src={require('../images/temple.jpg')} alt="hj" />
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 d-flex align-items-center justify-content-center" >
+              <div>
               <h1>
                 Vasavi<br></br><span>Kanyaka Parameshvari</span>
               </h1>
@@ -51,6 +73,7 @@ With the philanthropic services and support of the members of the community and 
               <p>
               According to legend, a powerful Chalukya monarch called Vishnuvardhana ruled Andhra in the 11th century CE. During this period, a prominent Vaishya named Kusuma Sreshti lived at Penugonda, under the king's domain. Due to his wisdom, the king treated the man like a chieftain. Due to his childlessness, the merchant prayed to Virupaksha, who blessed him with a son, Virupaksha, as well as a daughter, Vasavi, who grew up to become a comely and pious maiden. She caught the attention of the king, who wished to marry her. Despite the fact that her parents objected to the match, they could not dissuade the king of his desire. On the day of her wedding, the bride, her parents, as well as all the leaders of the community's 102 gotras showed their opposition by leaping into the homam fire, performing the act of agni pravesham. After her death, Vasavi's soul was sanctified at Penugonda, and elevated to the status of a deity.
               </p>
+              </div>
             </div>
           </div>
         </div>
@@ -59,7 +82,8 @@ With the philanthropic services and support of the members of the community and 
       {/* <Container> */}
       <div className={styles.section1}>
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-6 d-flex align-items-center justify-content-center" >
+              <div>
               <h1>
                 Marriage <span>Halls</span>
               </h1>
@@ -69,6 +93,7 @@ With the philanthropic services and support of the members of the community and 
               <p>
                 This hall has 2 ways to get down through the steps which helps the people to navigate easily. All functions like Marriage,60th Birthday Celebration,Rituals,Reception,Meetings,Speech can be conducted in this hall 
               </p>
+              </div>
             </div>
             <div className="col-md-6">
               <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="50" data-aos-mirror="true" data-aos-anchor-placement="top-center">
@@ -86,7 +111,10 @@ With the philanthropic services and support of the members of the community and 
                 <img src={require('../images/mahal1.jpg')} alt="hj" />
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 d-flex align-items-center justify-content-center" >
+              <div>
+
+              
               <h1>
                 Decors and<span>Lighting</span>
               </h1>
@@ -100,6 +128,7 @@ With the philanthropic services and support of the members of the community and 
                 The decorations are to be carried out by the clients or we'll suggest handy 
                 and classy decorators based on the client's budget and requirements.
               </p>
+              </div>
             </div>
           </div>
         </div>
@@ -107,7 +136,8 @@ With the philanthropic services and support of the members of the community and 
       {/* <Container> */}
       <div className={styles.section1}>
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-6 d-flex align-items-center justify-content-center" >
+              <div>
               <h1>
                 Dining <span>Halls</span>
               </h1>
@@ -117,6 +147,7 @@ With the philanthropic services and support of the members of the community and 
                 This is done to ensure that the eating environment is cleanly and sanitary to prevent any infections and diseases.
                 Sitting and eating is the culture of our country and our hall supports this ethnicity. All the food are served with care to the people who are seated. 
               </p>
+              </div>
             </div>
             <div className="col-md-6">
               <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="50" data-aos-mirror="true" data-aos-anchor-placement="top-center">
@@ -134,7 +165,8 @@ With the philanthropic services and support of the members of the community and 
                 <img src={require('../images/green room-2.jpg')} alt="hj" />
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 d-flex align-items-center justify-content-center" >
+              <div>
               <h1>
                 Rooms
               </h1>
@@ -147,6 +179,7 @@ With the philanthropic services and support of the members of the community and 
               <p>
                 Sleep is very essential for a relaxed mind.Our rooms provide the optimal environment for relaxation for the tired guests.
               </p>
+              </div>
             </div>
           </div>
         </div>

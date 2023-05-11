@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import styles from "../css/signup.module.css"
-import signup from "../images/loginbg1.jpg"
+import login from '../images/loginbg3.jpg'
 import axios from "axios"
 export const Signup = () => {
     const navigate=useNavigate();
@@ -33,39 +33,43 @@ export const Signup = () => {
         }
     }
   return (
-    <div className={styles.container}>
-    <div className={styles.full}>
-        <h2>SIGNUP</h2>
-        <form onSubmit={submit}>
-            <div className={styles.row} >
-            <label>User Name: </label>
-            <input type="text" onChange={(e)=>setName(e.target.value)} placeholder="Enter the User name"/>
-            </div><br></br>
-            <div className={styles.row}>
-            <label>Email : </label>
-            <input type="email" onChange={(e)=>setMail(e.target.value)} placeholder="Enter the email" />
+    <div className="LoginPageContainer">
+        <div className="LoginPageInnerContainer">
+            <div className="LoginFormContainer">
+                <div className="LoginFormInnerContainer">
+                    <header className="header">Create Your Account</header>
+                    <header className="subHeader">Welcome to <b>VASAVI MAHAL!</b> Create your account</header>
+                    <p>Aldready Have an Account,  <Link to="/login">Sign in</Link></p>
+                    <form>
+                        <div className="inputContainer">
+                            <label className="label" ><span>Name</span></label>
+                            <input type="email" className="input" placeholder="Enter your Name" onChange={(e)=>setName(e.target.value)}/>
+                        </div>
+                        <div className="inputContainer">
+                            <label className="label" ><span>Email
+                                    Address</span></label>
+                            <input type="email" className="input" onChange={(e)=>setMail(e.target.value)} placeholder="Enter your Email Address"/>
+                        </div>
+                        <div className="inputContainer">
+                            <label className="label"><span>Password</span></label>
+                            <input type="password" className="input" onChange={(e)=>setPass(e.target.value)} placeholder="Enter your Password"/>
+                        </div>
+                        <div className="inputContainer">
+                            <label className="label"><span>Confirm Password</span></label>
+                            <input type="password" className="input" onChange={(e)=>setCpass(e.target.value)} placeholder="Enter your Password"/>
+                        </div>
+                        <div className="inputContainer">
+                            <label className="label"><span>Contact Number</span></label>
+                            <input type="password" className="input" onChange={(e)=>setNum(e.target.value)} placeholder="Enter your Contact number"/>
+                        </div>
+                        <button className="LoginButton" onClick={submit}>Signup</button>
+                    </form>
+                </div>
             </div>
-            <br></br>
-            <div className={styles.row}>
-            <label>Password : </label>
-            <input type="password" onChange={(e)=>setPass(e.target.value)} placeholder="Enter the password" />
-            </div><br></br>
-            <div className={styles.row}>
-            <label>Confirm password : </label>
-            <input type="password" onChange={(e)=>setCpass(e.target.value)} placeholder="Enter the password"/>
-            </div><br></br>
-            <div className={styles.row}>
-            <label>Contact : </label>
-            <input type="number" onChange={(e)=>setNum(e.target.value)} placeholder="Enter the phone number"/>
-            </div><br></br>
-            <button className={styles.signbut} >Sign Up</button>
-            <div>
-            <p>Aldready Have an Account,</p>
-            <Link to='/login'>Login</Link>
+            <div className="ImageContianer">
+                <img src={login} class="GroupImage"/>
             </div>
-        </form>
-    </div>
-    <img src={signup} className={styles.homebody}/>
-    </div>
+        </div>
+        </div>  
   )
 }
